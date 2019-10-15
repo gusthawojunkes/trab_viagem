@@ -8,19 +8,110 @@
               
         <!--Link Arquivos externos-->
         <link rel="stylesheet" type="text/css" href="style.css"/>
-        <script href='script.js' type='text/javascript'></script>
+        <script href='code.js' type='text/javascript'></script>
     </head>
     <body>
-        <div id="col-1">
-            <h2>Visitantes SESI/SENAI</h2>
-            <h2 id="cont1"></h2>
-            <button type="button" id="btn1">+</button>
-        </div>
-        <div id="col-2">
-            <h2>Outros visitantes</h2>
-            <h2 id="cont2"></h2>
-            <button type="button" id="btn2">+</button>
-        </div>
+        <form method="POST">
+            <div id="col-1">
+                <h2>Visitantes SESI/SENIA</h2>
+                <h2 id="cont1"></h2>
+                <br>
+                <label>Nome: </label>
+                <input type="text" id="nome1" pattern="[a-zA-Z]+" title="Apenas Letras" required>
+                <br>
+                <br>
+                <label>Turma: </label>
+                <select id="turmas" required>
+                    <option value=""></option>
+                    <optgroup label="Primeiro Ano">
+                        <option value="2911">2911</option>
+                        <option value="2912">2912</option>
+                        <option value="2913">2913</option>
+                    </optgroup>
+                    <optgroup label="Segundo Ano">
+                        <option value="2921">2921</option>
+                        <option value="2922">2922</option>
+                        <option value="2923">2923</option>
+                    </optgroup>
+                    <optgroup label="Terceiro Ano">
+                        <option value="2931">2931</option>
+                        <option value="2932">2932</option>
+                        <option value="2933">2933</option>
+                        <option value="2934">2934</option>
+                    </optgroup>
+                </select>   
+                <br>
+                <br>
+                <input type="submit" id="btn1">
+
+            </div>
+        </form>
+        <form method="POST">
+            <div id="col-2">
+                <h2>Outros visitantes</h2>
+                <h2 id="cont2"></h2>
+                <br>
+                <label>Nome: </label>
+                <input type="text" id="nome2" pattern="[a-zA-Z]+"  title="Apenas Letras" required>
+                <br>
+                <br>
+                <label>Formação: </label>
+                <select id="formação" required>
+                    <option value=""></option>
+                    <optgroup label="Fundamental">
+                        <option value="1">Fundamental Incompleto</option>
+                        <option value="2">Fundamental Completo</option>
+                    </optgroup>
+                    <optgroup label="Ensino Médio">
+                        <option value="3">Ensino Médio Incompleto</option>
+                        <option value="4">Ensino Médio Completo</option>
+                    </optgroup>
+                    <optgroup label="Graduação">
+                        <option value="5">Graduação Incompleto</option>
+                        <option value="6">Graduação Completo</option>
+                    </optgroup>
+                    <optgroup label="Pós-Graduação">
+                        <option value="5">Pós-Graduação Incompleto</option>
+                        <option value="6">Pós-Graduação Completo</option>
+                    </optgroup>
+                    <optgroup label="Mestrado">
+                        <option value="7">Mestrado Incompleto</option>
+                        <option value="8">Mestrado Completo</option>
+                    </optgroup>
+                    <optgroup label="Doutorado">
+                        <option value="9">Doutorado Incompleto</option>
+                        <option value="10">Doutorado Completo</option>
+                    </optgroup>
+                    <optgroup label="Pós-Doutorado">
+                        <option value="11">Pós-Doutorado Incompleto</option>
+                        <option value="12">Pós-Doutorado Completo</option>
+                    </optgroup>
+                </select>   
+                <br>
+                <br>
+                <label>Área de atuação: </label>
+                <select id="trabalho" required>
+                    <option value=""></option>
+                    <option value="1">Administração, Economia e Negócios</option>
+                    <option value="2">Ciências Sociais</option>
+                    <option value="3">Mídia</option>
+                    <option value="4">Design</option>
+                    <option value="5">Direito</option>
+                    <option value="6">Educação</option>
+                    <option value="6">Arquitetura</option>
+                    <option value="7">Engenharia</option>
+                    <option value="8">Informação e Tecnologia</option>
+                    <option value="8">Saúde</option>
+                    <option value="8">Gastronomia</option>
+                    <option value="9">Turismo</option>
+                    <option value="10">Outro</option>
+                    <option value="10">Não trabalho</option>
+                </select> 
+                <br>
+                <br>
+                <input type="submit" id="btn2">
+            </div>
+        </form>
         <script src="script.js"></script>
     </body>
 </html>

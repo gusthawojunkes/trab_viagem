@@ -1,19 +1,21 @@
-button{
-    width: 30%;
-    height: 40px;
-}
-
 #col-1{
+    width:  30%;
+    float:left;
     text-align: center;
     margin-top: 5%;
     margin-left: 15%;
-    margin-right: 15%;
     padding: 2%;
 }
 #col-2{
+    width:  30%;
+    float: right;;
     text-align: center;
     margin-top: 5%;
-    margin-left: 15%;
     margin-right: 15%;
     padding: 2%;
 }
+
+#turma{
+    display: none;
+}
+
