@@ -2,32 +2,43 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <title>Viagem de estudos</title>
                 
         <!--Link Jquery-->
         <script src="http://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
               
         <!--Link Arquivos externos-->
         
-        <!-- Compiled and minified CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-        <!-- Compiled and minified JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-            
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="style.css"/>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script href='code.js' type='text/javascript'></script>
     </head>
     <body>
+            <div class="container-fluid">
         <form method="POST">
             <div id="col-1">
-                <h2>Visitantes SESI/SENAI</h2>
+                <h2 class="display-4 text-center">Visitantes SESI/SENAI</h2>
                 <h2 id="cont1">0</h2>
                 <br>
-                <label>Nome: </label>
-                <input type="text" id="nome1" pattern="[a-zA-Z]+" title="Apenas Letras" required>
+                <div class="input-group">
+                        <input type="text" class="form-control" aria-label="Text input with dropdown button" id="nome1" pattern="[a-zA-Z]+" title="Apenas Letras" required placeholder="Nome">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Turma</button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            <div role="separator" class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                          </div>
+                        </div>
+                      </div>
+                                <br>
                 <br>
-                <br>
-                <label>Turma: </label>
+                
                 <select id="turmas" required>
                     <option value=""></option>
                     <optgroup label="Primeiro Ano">
@@ -49,13 +60,13 @@
                 </select>   
                 <br>
                 <br>
-                <input type="submit" id="btn1">
+                <input type="submit" class="btn btn-outline-dark" id="btn1">
 
             </div>
         </form>
         <form method="POST">
             <div id="col-2">
-                <h2>Outros visitantes</h2>
+                <h2 class="display-4 text-center">Outros visitantes</h2>
                 <h2 id="cont2">0</h2>
                 <br>
                 <label>Nome: </label>
@@ -118,6 +129,7 @@
                 <br>
                 <input type="submit" id="btn2">
             </div>
+        </div>
         </form>
         <script src="code.js"></script>
     </body>
